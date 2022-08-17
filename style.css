@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'DynaPuff';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F9F5EB;
+}
+
+.content-container{
+    margin: 20px;
+    padding: 25px;
+    background-color: #1C3879;
+}
+
+.heading{
+    font-size: 45px;
+    opacity: 0.5;
+}
+
+.todo-list{
+    background-color:#607EAA;
+    padding: 30px;
+}
+
+.add-title{
+    text-align: center;
+}
+
+.input-todo{
+    width: 100%;
+    border-radius:10px;
+    border: none;
+    padding: 5px;
+}
+
+.btn-todo{
+    background-color: #1C3879;
+    color: #F9F5EB;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 104%;
+    text-align: center
+}
+
+/* .todo-container{
+   background-color: #000;
+} */
+.task-a-counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-tasks{
+    font-weight: 200;
+}
+
+.task-counter{
+   font-size: 10px;
+}
+/* 
+.todo-items{
+    background-color: black;
+} */
+
+/* .todo-list-items{
+    border: solid blue;
+} */
+
+.list-item{
+    list-style: circle;
+    padding: 10px;
+    
+}
