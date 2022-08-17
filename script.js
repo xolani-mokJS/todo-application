@@ -16,10 +16,13 @@ function newItemElement(){
     }
 
     document.getElementById('myInput').value = '';
-    let inputs =[];
-    inputs.push(myInputValue, myInputValue);
 
-    console.log(inputs);
+    // let inputs =[];
+
+    // for (let i = 0; i < inputs.length; i++ ){
+    //     inputs.push(myInputValue);
+    // }
+    // console.log(inputs);
 }
 
 
