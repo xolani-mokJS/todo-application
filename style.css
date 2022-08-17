@@ -77,23 +77,51 @@ body{
     background-color: black;
 } */
 
-/* .todo-list-items{
-    border: solid blue;
-} */
+.todo-list-items li:nth-child(odd){
+    background: #8198d7;
+    
+}
 
-.list-item{
-    list-style: none;
+.todo-list-items li:hover{
+    background: #3d84ef;
+}
+
+.todo-list-items li{
+    list-style:square;
     font-weight: 200;
     cursor: pointer;
     padding: 12px 8px;
-    /* background-color: aqua; */
+   
 }
 
-.list-item:checked{
-    background: #888;
+
+
+.todo-list-items li.checked{
+    background: #3d84ef;
     text-decoration: line-through;
 }
 
-.active{
-    color:#003865;
+.todo-list-items li.checked::before{
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
 }

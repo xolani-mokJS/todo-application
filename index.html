@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>ToDo list application</title>
 </head>
@@ -14,23 +14,22 @@
 
         <div class="todo-list">
             <p class="add-title"> Add to list</p>
-            <input class="input-todo" type="text">
-            <span class="btn-todo" type="submit">Add</span>
+            <input id="myInput" class="input-todo" type="text">
+            <span class="btn-todo" onclick="newItemElement()" type="submit">Add</span>
             
             <div class="todo-container">
                     <div class="task-a-counter">
                         <h4 class="my-tasks">My tasks</h4>
                         <p class="task-counter"> 3 tasks</p>
                     </div>
-                
 
-                <div class="todo-items">
-                   <ul class="todo-list-items">
-                        <li class="list-item active"> wash the dishes</li>
-                        <li class="list-item"> wash the dishes</li>
-                        <li class="list-item"> wash the dishes</li>
-                    </ul> 
-                </div>
+                    <div class="todo-items">
+                    <ul id="myList" class="todo-list-items">
+                            <!-- <li class="list-item checked"> wash the dishes</li>
+                            <li class="list-item"> wash the dishes</li>
+                            <li class="list-item"> wash the dishes</li> -->
+                        </ul> 
+                    </div>
                 
             </div>
             
