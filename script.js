@@ -1,5 +1,6 @@
 
 // creating new list item 
+
 function newItemElement(){
     let listItem = document.createElement("li");
     let myInput = document.getElementById('myInput');
@@ -15,5 +16,11 @@ function newItemElement(){
     }
 
     document.getElementById('myInput').value = '';
+    let inputs =[];
+    inputs.push(myInputValue, myInputValue);
+
+    console.log(inputs);
 }
+
+
 
