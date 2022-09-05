@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.header{
+    padding: 25px;
+    margin: 0 0 0 0;
+    background-image: url(/images/bg-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    
+}
+
+h1{
+    font-size: 48px;
+    font-weight:bold ;
+ 
+}
+
+h3{
+    margin: 25px;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 400 ;
+    font-family: 'Roboto', sans-serif;
+}
+
+.add-todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#myInput{
+ border: solid #EFB702 ;
+ padding: 10px 25px;
+ size: 25px;
+ margin-right: 0;
+ border-radius: 10px 0 0 10px ;
+}
+
+#myInput:hover, 
+#myInput:active{
+    border: solid #EFB702 ;
+}
+
+
+#submitButton{
+    background-color: #EFB702;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
+    border: solid #EFB702 ;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#submitButton:hover{
+    opacity: 0.9;
+
+
+}
