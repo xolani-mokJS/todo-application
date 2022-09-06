@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <script defer src="script.js" ></script>
+    <script src="https://kit.fontawesome.com/b9d1cbc489.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>ToDo list application</title>
 </head>
@@ -19,6 +20,7 @@
         <h3>Add to your list</h3>
         <form id="form">
             <input 
+            maxlength="50"
             placeholder="e.g Conquer the world"
             id="myInput"
             type="text">
@@ -28,12 +30,26 @@
                 Add to list
             </button>
         </form>
+        <p id="error"></p>
     </section>
 
     <section class="todo-list">
-        <div id="div">
-            
-        </div>
+        <h3> My list</h3>
+
+        <ul id="listBox">
+            <li class="list-item" id="div">
+                <input 
+                class="todo-item"
+                type="checkbox" 
+                name="item" 
+                id="todo-item">
+                <p> Conquer the world.</p>
+                <button  class="edit" id="edit">edit</button>
+                <button onclick="deleteElement(this)" class="delete" id="delete">delete</button>
+            </li>
+
+        </ul>
+       
 
     </section>
 </body>

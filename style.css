@@ -3,9 +3,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    
+    padding: 0;   
 }
 
 .header{
@@ -25,8 +23,6 @@
 
 h1{
     font-size: 48px;
-    font-weight:bold ;
- 
 }
 
 h3{
@@ -35,8 +31,12 @@ h3{
 
 p{
     font-size: 14px;
-    font-weight: 400 ;
-    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+#error {
+    font-size: 20px;
+    color: red;
 }
 
 .add-todo{
@@ -70,6 +70,45 @@ p{
 
 #submitButton:hover{
     opacity: 0.9;
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    padding: 20px;
+}
+
+.list-item{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    border: solid #EFB702;
+    border-radius: 10px;
+    padding: 10px 25px;
+    min-width: 300px;
+    margin-top: 10px;
+}
 
 
+.delete{
+    color: red;
+    padding: 5px;
+    margin-left: 15px;
+    border: none;
+    background-color: #fff;
+}
+
+.edit{
+    margin-left: 25px;
+    color: green;
+    padding: 5px;
+    border: none;
+    background-color: #fff;
+}
+
+.todo-item{
+    padding: 5px;
+    margin-right: 10px;
 }
