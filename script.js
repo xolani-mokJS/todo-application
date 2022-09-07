@@ -2,11 +2,10 @@
 let addbutton = document.getElementById('submitButton');
 let form = document.getElementById('form');
 let listBox = document.getElementById('listBox');
+let myList = [];
 
+//event handlers Litening to the submit buuton and calling the function to builds the element and prints to dom
 
-//Litening to the submit buuton and calling the function to builds the element and prints to dom
-
-//event handlers
 form.addEventListener('submit', function(event){
     event.preventDefault();
     addUserInput();
@@ -20,26 +19,20 @@ form.addEventListener('submit', function(event){
 
 // building the to do list
   function addUserInput(){
-
-    let myList = [];
-   
-  //building the items
-  //fetching relevant items we will need
   let userInput = document.getElementById('myInput').value;
 
   todo = {
       inputName: userInput,
-      date: Math.random(Math.floor(10))
+      id: new Date()
     }
-
-      myList.push(todo);
+  myList.push(todo);
 
   // add classe to the fetched items
   let li = document.createElement('li');
   li.classList.add('list-item');
 
   //check if the user has added relevant info in to do list
-  if (userInput == '' || userInput == null){
+  if (userInput == null ||userInput.trim() == '' ){
 
     let error = document.getElementById('error');
     error.innerHTML = 'Please enter something to do.';
@@ -48,16 +41,7 @@ form.addEventListener('submit', function(event){
         // if user added all relevant things build the list and appen the children
           listBox.appendChild(li);
           li.innerHTML = `
-                        <input 
-                        class="todo-item"
-                        type="checkbox" 
-                        name="item" 
-                        id="todo-item">
-                        <input class="p-todo"
-                        type="text"
-                        value="${todo.inputName}"
-                        readonly
-                        id="${todo.date}">
+                        <input class="p-todo" type="text" value="${todo.inputName}" readonly id="${todo.id}">
                         <button onclick="editButton()" name="edit" class="edit" id="edit">edit</button>
                         <button onclick="deletebutton()" name="delete" class="delete" id="delete">delete</button>
           `
@@ -71,7 +55,7 @@ form.addEventListener('submit', function(event){
 function editButton(){
  let editThis = document.getElementById('todo-item');
 
- if( editThis.attribute === 'readonly'){
+ if( editThis == 'readonly'){
   editThis.removeAttribute('readonly');
  } else {
   editThis.setAttribute('readonly', true)
@@ -87,6 +71,4 @@ function removeAll(){
 document.getElementById('listBox').innerHTML = '';
 }
 
-function hide(){
-  
-}
+

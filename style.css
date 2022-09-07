@@ -143,3 +143,6 @@ a{
     padding: 25px;
 }
 
+.completed{
+    text-decoration: line-through;
+}
