@@ -1,11 +1,10 @@
 //getting elements from DOM
-let addbutton = document.getElementById('submitButton');
+let addButton = document.getElementById('submitButton');
 let form = document.getElementById('form');
 let listBox = document.getElementById('listBox');
 let myList = [];
 
-//event handlers Litening to the submit buuton and calling the function to builds the element and prints to dom
-
+//event handlers Listening to the submit button and calling the function to builds the element and prints to dom
 form.addEventListener('submit', function(event){
     event.preventDefault();
     addUserInput();
@@ -27,7 +26,7 @@ form.addEventListener('submit', function(event){
     }
   myList.push(todo);
 
-  // add classe to the fetched items
+  // add classes to the fetched items
   let li = document.createElement('li');
   li.classList.add('list-item');
 
@@ -38,12 +37,12 @@ form.addEventListener('submit', function(event){
     error.innerHTML = 'Please enter something to do.';
    } 
      else{
-        // if user added all relevant things build the list and appen the children
+        // if user added all relevant things build the list and append the children
           listBox.appendChild(li);
           li.innerHTML = `
                         <input class="p-todo" type="text" value="${todo.inputName}" readonly id="${todo.id}">
                         <button onclick="editButton()" name="edit" class="edit" id="edit">edit</button>
-                        <button onclick="deletebutton()" name="delete" class="delete" id="delete">delete</button>
+                        <button onclick="deleteButton()" name="delete" class="delete" id="delete">delete</button>
           `
           document.getElementById('myInput').value = '';
         }
@@ -62,7 +61,7 @@ function editButton(){
  }
 }
 
-function deletebutton(){
+function deleteButton(){
   let removeThis = document.querySelector('.list-item');
   removeThis.remove();
 }
