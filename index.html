@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js" ></script>
-    <script src="https://kit.fontawesome.com/b9d1cbc489.js" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script defer src="app.js" ></script>
+    <!-- stylesheet -->
     <link rel="stylesheet" href="style.css">
     <title>ToDo list application</title>
 </head>
 <body>
+    <!-- header section -->
     <section class="header">
         <h1> Your To-Do List</h1>
         <p>"Plans are nothing;
          Planning is everything"</p>
     </section>
 
+    <!-- add to do section -->
     <section class="add-todo">
         <h3>Add to your list</h3>
         <form id="form">
@@ -33,22 +36,14 @@
         <p id="error"></p>
     </section>
 
+    <!-- display too list section -->
     <section class="todo-list">
         <h3> My list</h3>
 
         <ul id="listBox">
-            <!-- <li class="list-item" id="div">
-                <input 
-                class="todo-item"
-                type="checkbox" 
-                name="item" 
-                id="todo-item">
-                <p class="p-todo"> Conquer the world.</p>
-                <button  class="edit" id="edit">edit</button>
-                <button class="delete" id="delete">delete</button>
-            </li> -->
         </ul>
         
+        <!-- removeAll all to dos  -->
         <a onclick="removeAll()"> Clear all Tasks</a>
     
 
